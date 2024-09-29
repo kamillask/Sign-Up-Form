@@ -10,9 +10,8 @@
 </head>
 <body>
     <div class="left">
-        <div class="banner">ODIN</div>
-        <div class="credit">Credit to <a href="https://unsplash.com/@joelfilip" target="_blank">
-             Joel Filipe </a> on <a href="https://unsplash.com/" target="_blank"> Unsplash</a></div>
+        <div class="banner">TECH</div>
+        <div class="credit">Credit to <a href="https://unsplash.com/@joelfilip" target="_blank"> Joel Filipe </a> on <a href="https://unsplash.com/" target="_blank"> Unsplash</a></div>
     </div>
     
     <div class="right">
@@ -25,26 +24,40 @@
         </div>
         <form action="#">
             <div class="name">
-                <label for="firstName">FIRST NAME</label>
-                <input type="text" name="firstName" id="firstName">
-                <label for="lastName">LAST NAME</label>
-                <input type="text" name="lastName" id="lastName">              
+                <div class="entry">
+                    <label for="firstName">FIRST NAME</label>
+                    <input type="text" name="firstName" id="firstName">
+                </div>
+                <div class="entry">
+                    <label for="lastName">LAST NAME</label>
+                    <input type="text" name="lastName" id="lastName">
+                </div>              
             </div>
             <div class="contact">
-                <label for="emailAddr">EMAIL</label>
-                <input type="email" name="emailAddr" id="emailAddr">
-                <label for="phoneNum">PHONE NUMBER</label>
-                <input type="text" name="phoneNum" id="phoneNum">           
+                <div class="entry">
+                    <label for="emailAddr">EMAIL</label>
+                    <input type="email" name="emailAddr" id="emailAddr">
+                </div>
+                <div class="entry">
+                    <label for="phoneNum">PHONE NUMBER</label>
+                    <input type="text" name="phoneNum" id="phoneNum">
+                </div>           
             </div>
             <div class="password">
-                <label for="password">PASSWORD</label>
-                <input type="password" name="password" id="password">
-                <label for="confirmPass">CONFIRM PASSWORD</label>
-                <input type="password" name="confirmPass" id="confirmPass">
+                <div class="entry">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="entry">
+                    <label for="confirmPass">CONFIRM PASSWORD</label>
+                    <input type="password" name="confirmPass" id="confirmPass">
+                </div>
             </div>
         </form>
-        <button type="submit">Create Account</button>
-        <p>Already have an account? <a href="">Log in</a></p>
+        <div class="bottom">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="" id="right">Log in</a></p>
+        </div>
     </div>
     
 </body>
