@@ -1,8 +1,10 @@
 const pass = document.querySelector("#password");
 const confirmPass = document.querySelector("#confirmPass");
-const passContainer = document.querySelector("#loginForm");
+const formContainer = document.querySelector("#loginForm");
 
 const submitButton = document.querySelector("#submitButton");
+
+const bottomContainer = document.querySelector(".bottom");
 
 const errorMessage = document.createElement("div");
 errorMessage.setAttribute("id", "errorMessage");
@@ -27,16 +29,16 @@ pass.addEventListener("focusout", () => {
     if(confirmPass.value!=="" && checkMatching()===false){
         pass.style.border = "1px solid red";
         errorMessage.textContent = "Passwords do not match.";
-        passContainer.appendChild(errorMessage);
+        formContainer.appendChild(errorMessage);
         return;
     }
     if(checkLength(pass)===true){
         pass.style.border = "1px solid green";
-        passContainer.removeChild(errorMessage);
+        formContainer.removeChild(errorMessage);
     } else{
         pass.style.border = "1px solid red";
         errorMessage.textContent = "Password is too short.";
-        passContainer.appendChild(errorMessage);
+        formContainer.appendChild(errorMessage);
     }
     
 })
@@ -45,16 +47,22 @@ confirmPass.addEventListener("focusout", () => {
     if(checkLength(confirmPass)===false){
         confirmPass.style.border = "1px solid red";
         errorMessage.textContent = "Password is too short.";
-        passContainer.appendChild(errorMessage);
+        formContainer.appendChild(errorMessage);
         return;
     }
     if(checkMatching()===true){
         confirmPass.style.border = "1px solid green";
         pass.style.border = "1px solid green";
-        passContainer.removeChild(errorMessage);
+        formContainer.removeChild(errorMessage);
     } else{
         confirmPass.style.border = "1px solid red";
         errorMessage.textContent = "Passwords do not match.";
-        passContainer.appendChild(errorMessage);
+        formContainer.appendChild(errorMessage);
     }
+})
+
+bottomContainer.addEventListener("click", () => {
+    alert("You've been added to the mailing list!");
+    formContainer.reset();
+    formContainer.removeChild(errorMessage);
 })
