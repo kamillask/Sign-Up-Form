@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="left">
-        <div class="banner">TECH</div>
-        <div class="credit">Credit to <a href="https://unsplash.com/@joelfilip" target="_blank"> Joel Filipe </a> on <a href="https://unsplash.com/" target="_blank"> Unsplash</a></div>
+        <div class="banner">TECH TECH©</div>
+        <div class="credit">Credit to <a href="https://unsplash.com/@joelfilip" target="_blank">Joel Filipe</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></div>
     </div>
     
     <div class="right">
@@ -22,35 +22,35 @@
             </h1>
             <h1>You <em>know</em> you want to.</h1>
         </div>
-        <form action="#">
+        <form action="#" id="loginForm">
             <div class="name">
                 <div class="entry">
-                    <label for="firstName">FIRST NAME</label>
-                    <input type="text" name="firstName" id="firstName">
+                    <label for="firstName">FIRST NAME*</label>
+                    <input type="text" name="firstName" id="firstName" required>
                 </div>
                 <div class="entry">
-                    <label for="lastName">LAST NAME</label>
-                    <input type="text" name="lastName" id="lastName">
+                    <label for="lastName">LAST NAME*</label>
+                    <input type="text" name="lastName" id="lastName" required>
                 </div>              
             </div>
             <div class="contact">
                 <div class="entry">
-                    <label for="emailAddr">EMAIL</label>
-                    <input type="email" name="emailAddr" id="emailAddr">
+                    <label for="emailAddr">EMAIL*</label>
+                    <input type="email" name="emailAddr" id="emailAddr" required>
                 </div>
                 <div class="entry">
                     <label for="phoneNum">PHONE NUMBER</label>
-                    <input type="text" name="phoneNum" id="phoneNum">
+                    <input type="number" name="phoneNum" id="phoneNum" minlength="10" maxlength="10">
                 </div>           
             </div>
             <div class="password">
                 <div class="entry">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password">
+                    <label for="password">PASSWORD*</label>
+                    <input type="password" name="password" id="password" required>
                 </div>
                 <div class="entry">
-                    <label for="confirmPass">CONFIRM PASSWORD</label>
-                    <input type="password" name="confirmPass" id="confirmPass">
+                    <label for="confirmPass">CONFIRM PASSWORD*</label>
+                    <input type="password" name="confirmPass" id="confirmPass" required>
                 </div>
             </div>
         </form>
