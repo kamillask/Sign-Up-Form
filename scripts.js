@@ -1,5 +1,9 @@
 const pass = document.querySelector("#password");
 const confirmPass = document.querySelector("#confirmPass");
+const firstName = document.querySelector("#firstName");
+const lastName = document.querySelector("#LastName");
+const emailAddr = document.querySelector("#emailAddr");
+
 const formContainer = document.querySelector("#loginForm");
 
 const submitButton = document.querySelector("#submitButton");
@@ -61,8 +65,13 @@ confirmPass.addEventListener("focusout", () => {
     }
 })
 
-bottomContainer.addEventListener("click", () => {
-    alert("You've been added to the mailing list!");
-    formContainer.reset();
-    formContainer.removeChild(errorMessage);
+submitButton.addEventListener("click", () => {
+    if((checkLength(pass)===true && checkMatching()===true) && firstName!=="" && lastName!=="" & emailAddr!==""){
+        alert("You've been added to the mailing list!");
+        formContainer.reset();
+        formContainer.removeChild(errorMessage);
+    } else{
+        alert("Please fill out the required inputs.")
+    }
+    
 })

@@ -112,9 +112,13 @@ input{
     width: fit-content;
 }
 
-input:invalid{
+/* input:invalid{
     border: 1px solid red;
-}
+} */
+
+/* input:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid red;
+} */
 
 .bottom{
     display: flex;
