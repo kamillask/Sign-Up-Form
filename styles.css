@@ -125,3 +125,9 @@ button{
     width: fit-content;
     box-shadow: 5px 3px 5px black;
 }
+
+input:focus{
+    border: 1px solid rgb(73, 229, 250);
+    box-shadow: inset 1px 1px 5px black;
+    outline: none;
+}
